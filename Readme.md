@@ -29,7 +29,7 @@ My goals of this template are:
 
 ## Known Issues
 ### Project System/WPF
-As of March 2018, the new project system is not feature-complete compared to the classic project system (planned for VS 16.0).
+As of March 2018, the new project system is not feature-complete compared to the classic project system (planned for VS 16.0, see [missing features of the .NET project system](https://github.com/dotnet/project-system/issues?q=is%3Aissue+is%3Aopen+label%3AParity-VSLangProj)).
 WPF is not officially supported. The `WPF.props` file should provide everything to build WPF projects. Anyway, it lacks IntelliSense in the XAML designer and Blend does not work.
 
 ### PostSharp/VS Live Unit Testing
