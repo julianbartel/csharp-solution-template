@@ -5,7 +5,7 @@ My goals of this template are:
  - Act as a playground and test environment for latest development tools.
 
 ## Features
-- All project templates based on new project system ([/dotnet/project-system])
+- All project templates based on new project system ([dotnet/project-system](/dotnet/project-system))
 - Common project settings separated in a set of `.props` files
 - Templates for several project types
   - .NET Core 2 Class Library
