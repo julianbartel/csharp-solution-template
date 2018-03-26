@@ -11,15 +11,15 @@ My goals of this template are:
   - .NET Core 2 Class Library
   - .NET 4.7.1 WPF App
 - Code Analysis with predefined rulesets (configured in `CodeAnalysis.props`).
-  - FxCop
-  - StyleCop
+  - [FxCop](https://github.com/dotnet/roslyn-analyzers)
+  - [StyleCop](https://github.com/DotNetAnalyzers/StyleCopAnalyzers)
   - Invoked on a per-project basis using NuGet packages
   - Separate rulesets for production code and unit test
   - General no warning policy! That is, every message breaks the build, with no excuse. To get rid of a message, it must be fixed, suppressed in code (with proper justification) or disabled in the ruleset.
 - Unit Test templates for xUnit and MSTest 2
 - Unit Tests preconfigured to use 
-  - FluentAssertions
-  - NSubstitute
+  - [FluentAssertions](https://github.com/fluentassertions/fluentassertions)
+  - [NSubstitute](https://github.com/nsubstitute/NSubstitute)
 - Unit Tests working with TDD tools:
   - VS Live Unit Testing (__not__ in combination with PostSharp!, see _„Known Issues”_)
   - ReSharper Ultimate
