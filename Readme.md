@@ -5,7 +5,7 @@ My goals of this template are:
  - Act as a playground and test environment for latest development tools.
 
 ## Features
-- All project templates based on new project system (dotnet/project-system)
+- All project templates based on new project system ([/dotnet/project-system])
 - Common project settings separated in a set of `.props` files
 - Templates for several project types
   - .NET Core 2 Class Library
@@ -29,7 +29,7 @@ My goals of this template are:
 
 ## Known Issues
 ### Project System/WPF
-As of April 2018, the new project system is not feature-complete compared to the classic project system (planned for VS 16.0).
+As of March 2018, the new project system is not feature-complete compared to the classic project system (planned for VS 16.0).
 WPF is not officially supported. The `WPF.props` file should provide everything to build WPF projects. Anyway, it lacks IntelliSense in the XAML designer and Blend does not work.
 
 ### PostSharp/VS Live Unit Testing
