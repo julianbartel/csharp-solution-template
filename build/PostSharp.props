@@ -1,0 +1,19 @@
+<Project>
+
+  <ItemGroup>
+    <PackageReference Include="PostSharp.Patterns.Model" Version="5.1.7-preview">
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <PropertyGroup>
+    <PostSharpDisabledMessages>PS0131</PostSharpDisabledMessages>
+    
+    <!-- 
+      PostSharp does not support C# 7.2 yet officially.
+      Compatibility should be checked for the used PostSharp features.
+    -->
+    <PostSharpSkipLanguageVersionValidation>true</PostSharpSkipLanguageVersionValidation>
+  </PropertyGroup>
+
+</Project>

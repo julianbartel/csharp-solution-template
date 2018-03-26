@@ -1,0 +1,34 @@
+<Project>
+
+  <Import Project="CommonSettings.props" />
+
+  <PropertyGroup>
+    <IsPackable>false</IsPackable>
+    <CodeAnalysisRuleSet>..\..\build\UnitTest.ruleset</CodeAnalysisRuleSet>
+    <DocumentationFile></DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.6.0" />
+    <PackageReference Include="FluentAssertions" Version="5.2" />
+    <PackageReference Include="NSubstitute" Version="3.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Service Include="{82a7f48d-3b50-4b1e-b82e-3ada8210c358}" />
+  </ItemGroup>
+
+  <!-- 
+      Unit Test framework can be switched on a per-project basis with the TestFramework property.
+      The appropiate test framework is selected in specific .props file as long as no TestFrameworkVersion is specified in project or here.
+      If the test framework is fixed accross whole solution, the conditional switches should be removed, as well as the unused props.
+  -->
+  <PropertyGroup>
+    <TestFramework Condition="$(TestFramework) == ''">xUnit</TestFramework>
+    <!--<TestFrameworkVersion Condition="$(TestFrameworkVersion) == ''"></TestFrameworkVersion>-->
+  </PropertyGroup>
+
+  <Import Project="MSTest.props" Condition="$(TestFramework) == 'MSTest'"/>
+  <Import Project="xUnit.props" Condition="$(TestFramework) == 'xUnit'"/>
+
+</Project>

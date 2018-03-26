@@ -1,0 +1,27 @@
+<Project>
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <LangVersion>7.2</LangVersion>
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+
+    <OutputPath>..\..\bin\$(Configuration)\$(MSBuildProjectName)</OutputPath>
+    <DocumentationFile>$(IntermediatePath)\$(MSBuildProjectName).xml</DocumentationFile>
+
+    <!-- 
+      As of 2018-03-22, activating PostSharp breaks VS Live Unit Test functionality.
+      ReSharper Continious Testing works with PostSharp.
+    -->
+    <PostSharp>true</PostSharp>
+    
+  </PropertyGroup>
+
+  <Import Project="CodeAnalysis.props" />
+  <Import Project="PostSharp.props" Condition="$(PostSharp)" />
+
+  <ItemGroup>
+    <Resource Include="**\*.png" />
+    <Resource Include="**\*.ico" />
+  </ItemGroup>
+</Project>

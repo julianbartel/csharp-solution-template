@@ -1,0 +1,12 @@
+<Project>
+
+  <PropertyGroup>
+    <TestFrameworkVersion Condition="$(TestFrameworkVersion) == ''">2.3.1</TestFrameworkVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="xunit" Version="$(TestFrameworkVersion)" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="$(TestFrameworkVersion)" />
+    <DotNetCliToolReference Include="dotnet-xunit" Version="$(TestFrameworkVersion)" />
+  </ItemGroup>
+</Project>

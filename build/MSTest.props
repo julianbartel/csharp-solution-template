@@ -1,0 +1,11 @@
+<Project>
+
+  <PropertyGroup>
+    <TestFrameworkVersion Condition="$(TestFrameworkVersion) == ''">1.2.0</TestFrameworkVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MSTest.TestAdapter" Version="$(TestFrameworkVersion)" />
+    <PackageReference Include="MSTest.TestFramework" Version="$(TestFrameworkVersion)" />
+  </ItemGroup>
+</Project>
